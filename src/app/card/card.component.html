@@ -1,0 +1,27 @@
+<input
+    class="container"
+    #input
+    (keyup.enter)="selectPokemon(+input.value)"
+    type="number"
+>
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    <div *ngFor="let pokemon of pokemonList" class="col">
+        <div class="card">
+            <img (click)="cliquePokemon(pokemon.id)" src="{{pokemon.picture}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <div *ngIf="pokemon.name == 'Carapuce'">
+                    <p>Carapute</p>
+                </div>
+                <div *ngIf="pokemon.name != 'Carapuce'">
+                    <p>{{pokemon.name}}</p>
+                </div>
+                <p class="card-text">HP : {{pokemon.hp}}</p>
+                <p class="card-text">CP : {{pokemon.cp}}</p>
+                <div *ngFor="let type of pokemon.types">
+                    <p class="card-text">{{type}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
