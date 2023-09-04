@@ -6,7 +6,7 @@
 >
 
 <div class="row row-cols-1 row-cols-md-3 g-4">
-    <div *ngFor="let pokemon of pokemonList" class="col">
+    <div *ngFor="let pokemon of getPokemon()" class="col">
         <div class="card">
             <img (click)="cliquePokemon(pokemon.id)" src="{{pokemon.picture}}" class="card-img-top" alt="...">
             <div class="card-body">
