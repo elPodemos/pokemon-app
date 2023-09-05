@@ -40,12 +40,12 @@ export class CardComponent {
     if(form > this.getPokemon().length || form < 1){
       console.log("Il n existe pas !");
     }else{
-      console.log("Vous avez selectionner : "+ this.getPokemon()[form-1].name);
+      console.log("Vous avez selectionner : "+ this.getPokemonById(form).name);
     }
   }
 
   cliquePokemon(id:number):void{
-    console.log("Vous avez selectionner : "+ this.getPokemonById(id-1).name);
+    console.log("Vous avez selectionner : "+ this.getPokemonById(id).name);
   }
 
 

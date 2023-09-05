@@ -16,11 +16,7 @@
                 <div *ngIf="pokemon.name != 'Carapuce'">
                     <p>{{pokemon.name}}</p>
                 </div>
-                <p class="card-text">HP : {{pokemon.hp}}</p>
-                <p class="card-text">CP : {{pokemon.cp}}</p>
-                <div *ngFor="let type of pokemon.types">
-                    <p class="card-text">{{type}}</p>
-                </div>
+                <a routerLink="{{pokemon.id}}">Détails</a>
             </div>
         </div>
     </div>

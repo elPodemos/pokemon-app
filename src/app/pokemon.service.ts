@@ -13,7 +13,7 @@ export class PokemonService {
   }
 
   fetchById(i:number){
-    return POKEMONS[i];
+    return POKEMONS[i-1];
   }
 
 }

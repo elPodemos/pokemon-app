@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row">
+        <div class="col md s12">
+            <img src="{{pokemonSelect.picture}}" alt="card image">
+        </div>
+        <div class="col md s12">
+            <h2></h2>
+            <p>HP: {{pokemonSelect.hp}}</p>
+            <p>CP: {{pokemonSelect.cp}}</p>
+            <p>Types:</p>
+            <div *ngFor="let type of pokemonSelect.types" class="col">
+                <li>{{type}}</li>
+            </div>
+            <p>Created: {{pokemonSelect.created | date: 'longDate' }}</p>
+        </div>
+    </div>
+</div>
